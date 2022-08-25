@@ -8,9 +8,10 @@ app.use(bodyParser.json());
 
 app.post('/events', async (req, res, next) => {
   const event = req.body;
-  await axios.post("http://localhost:4001/events", event)
-  await axios.post("http://localhost:4000/events", event)
-  await axios.post("http://localhost:4002/events", event)
+  await axios.post("http://localhost:4001/events", event) //comments
+  await axios.post("http://localhost:4000/events", event) //posts
+  await axios.post("http://localhost:4002/events", event) //query
+  await axios.post("http://localhost:4003/events", event) //moderation
 
   res.send({status: "OK"})
 })
