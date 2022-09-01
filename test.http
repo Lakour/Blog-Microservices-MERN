@@ -1,0 +1,22 @@
+GET http://localhost:4000/posts
+
+#######
+
+ POST http://localhost:32231/posts
+ content-type: application/json
+
+ {
+  "title": "First Post"
+ }
+
+#######
+  POST http://localhost:4001/posts/123/comments
+  content-type: application/json
+
+  {
+    "content": "This is a another comment"
+  }
+
+
+#######
+  GET http://localhost:4001/posts/123/comments
